@@ -1,0 +1,32 @@
+{
+  "name": "chatwoot-mcp-bridge",
+  "version": "0.1.0",
+  "description": "演示项目，非客户案例 —— MCP server demo：把 Chatwoot（国际开源自托管客服/全渠道对话系统，Ruby on Rails）的会话/消息/联系人操作暴露给 Claude、扣子等 AI 客户端",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "chatwoot-mcp-bridge": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "mock-api": "node scripts/mock-chatwoot-api.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.2.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
+}
